@@ -12,7 +12,7 @@ var index = require('./routes/index');
 var hello = require('./routes/hello');
 // Example route
 // var user = require('./routes/user');
-
+var project = require('./routes/project');
 var app = express();
 
 // all environments
@@ -36,9 +36,6 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-var index = require('./routes/index');
-var project = require('./routes/project');
-app.get('/', index.view);
 app.get('/hello/:userName', hello.view);
 app.get('/', index.view);
 app.get('/project/:name', project.viewProject);
